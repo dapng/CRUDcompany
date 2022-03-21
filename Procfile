@@ -1,0 +1,1 @@
+web: gunicorn terekalmaz.wsgi --log-file -

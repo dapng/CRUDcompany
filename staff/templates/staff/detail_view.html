@@ -1,0 +1,43 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Информация о сотруднике{% endblock %}
+
+{% block content %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Сотрудник</h1>
+      <div class="btn-toolbar mb-2 mb-md-0">
+        
+      </div>
+    </div>
+    <ul class="nav flex-column mb-2">
+    <li class="nav-item">
+      <a href="{% url 'staff'%}" class="btn btn-primary">Назад</a>
+        </a>
+        <a href="{% url 'staff-update' staff.id %}" class="btn btn-success">Измененить</a>
+        </a>
+        <a href="{% url 'staff-delete' staff.id %}" class="btn btn-danger">Удалить</a>
+        </a>
+    </li>
+</ul>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-3 border-bottom">
+    <div class="btn-toolbar mb-2 mb-md-0">
+        
+      </div>
+    </div>
+      <div class="alert alert-light" style="background-color: #f3f3ec;">
+        <h3>{{ staff.title }}</h3>
+        <b>Имя:</b> <a>{{ staff.first_name }}</a>
+        <br><b>Фамилия:</b> <a>{{ staff.last_name }}</a>
+        <br><b>Занимаемая должность:</b> <a>{{ staff.staff_name }}</a>
+        <br><b>Возрасть:</b> <a>{{ staff.age }}</a>
+        <br><b>Трудовой (страховой) стаж:</b> <a>{{ staff.staff_exp }}</a>
+        <br><b>Заработная плата:</b> <a>{{ staff.wages }}</a>
+        <br><b>Образование сотрудника:</b> <a>{{ staff.education }}</a>
+        <br><b>Должностные обязанности:</b> <a>{{ staff.duties }}</a>
+        <a></a>
+        <a></a>
+        <a></a>
+      </div>
+    </main>
+{% endblock %}
